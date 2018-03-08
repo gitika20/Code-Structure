@@ -5,8 +5,7 @@ import Vuetify from 'vuetify'
 import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import VeeValidate from 'vee-validate'
-import colors from 'vuetify/es5/util/colors'
+
 
 
 Vue.use(VeeValidate);
