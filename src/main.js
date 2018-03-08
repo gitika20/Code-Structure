@@ -9,14 +9,19 @@ import VeeValidate from 'vee-validate'
 import colors from 'vuetify/es5/util/colors'
 
 
-
-
 Vue.use(VeeValidate);
 //require('swiper/dist/css/swiper.css')
  //import css from 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify);
  Vue.use(VueAwesomeSwiper);
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+// export const HTTP = axios.create({
+//   baseURL: `http://jsonplaceholder.typicode.com/`,
+//  // headers: {
+//   //   Authorization: 'Bearer {token}'
+//   // }
+// })
 
 /* eslint-disable no-new */
 new Vue({

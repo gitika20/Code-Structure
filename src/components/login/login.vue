@@ -40,24 +40,20 @@
                   <!-- right side -->
                   <div style="background-color:#EAFDFD;">
                     <v-card-text>
-                      <v-form v-model="valid" method="post" action="/something" id="nativeForm">
+                      <v-form v-model="validx" method="post"  v-on:submit.prevent="getFormValues">
 
                         <div class="user_login text-xs-left">
                           <v-text-field prepend-icon="person" name="login" label="User-Email" type="login" v-model="email" :rules="emailRules" class="useremail"></v-text-field>
                           <v-text-field prepend-icon="lock" name="password" label="Password" id="password" type="password" v-model="password" :rules="passwordRules"></v-text-field>
                         </div>
-                      </v-form>
-
-                    </v-card-text>
-
-                    <v-card-actions>
+                        
                       <div class="login_button">
-                        <v-btn class="button" @click="submit" :disabled="!valid">Log in</v-btn>
-
-
-                        <!-- <button type="submit" value="Login">login</button> -->
+                        <v-btn class="button" type="submit" @click="submit" :disabled="!valid">Log in</v-btn>
                       </div>
-                    </v-card-actions>
+              
+                        </v-form>
+
+                        </v-card-text>
 
 
                   </div>
@@ -72,12 +68,13 @@
   </v-app>
 </template>
 <script>
+  import axios from 'axios'
   export default {
     data() {
       return {
         email: '',
         password: '',
-        valid: false,
+        validx: false,
 
         emailRules: [v => !!v || '*User-Email is required',
           (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'User-Email must be valid'
@@ -90,12 +87,26 @@
     },
     methods: {
       submit() {
-        nativeForm.submit()
+        
+        console.log('debug')
+      },
+      getFormValues(submitEvent) {
+        axios.post(`http://jsonplaceholder.typicode.com/posts`, {
+            body: this.email
+          })
+          .then(response => {
+            console.log(response)
+          })
+          .catch(e => {
+            this.emailRules.push(e)
+          })
+          
       }
+      
     },
     computed: {
       valid: function () {
-        return this.name != '' && this.email != ''
+        return this.email != '' && this.password != ''
       }
     }
   }
@@ -122,7 +133,7 @@
     font-size: 15px;
     font-weight: 400;
     height: 23px;
-    margin-top: 128px;
+    margin-top: 120px;
     letter-spacing: 1px;
     padding-left: 5px;
   }
@@ -141,15 +152,15 @@
 
   .login_button {
 
-    width: 100%;
+    
     height: 75px;
-    padding-top: 15px;
+    padding-top:13px;
     margin-top: 20px;
-    margin-left: -3px;
+   margin-left: -23px;
   }
 
   .button {
-    width: 100%;
+    width: 382px;
     height: 71px;
     border-top: 1px solid #C5C4C4;
     font-size: 25px;
