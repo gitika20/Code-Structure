@@ -3,8 +3,9 @@ import Vuetify from 'vuetify'
 import Router from 'vue-router'
 import login from './../components/login/login.vue'
 import navbar from './../components/navbar/navbar.vue'
-
-
+import profile from './../components/profile/profile.vue'
+import jumbotro from './../components/jumbotro/jumbotro.vue'
+0
 
 
 
@@ -21,6 +22,17 @@ export default new Router({
       path:'/navbar',
       name:'navbar',
       component:navbar
+    },
+    {
+      path:'/profile',
+      name:'profile',
+      component:profile
+    },
+    {
+      path: '/jumbotro',
+      name: 'jumbotro',
+      component: jumbotro
+
     }
     
    

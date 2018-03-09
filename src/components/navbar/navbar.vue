@@ -1,6 +1,8 @@
 <template>
 <div id="app">
     <v-app class="hgt">
+        
+        
 
         <v-navigation-drawer permanent>
             <v-flex>

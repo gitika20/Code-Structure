@@ -6,11 +6,6 @@ import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
-
-
-Vue.use(VeeValidate);
-//require('swiper/dist/css/swiper.css')
- //import css from 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify);
  Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;

@@ -92,13 +92,15 @@
       },
       getFormValues(submitEvent) {
         axios.post(`http://jsonplaceholder.typicode.com/posts`, {
-            body: this.email
+            body: this.email,
+            password:this.password
           })
           .then(response => {
             console.log(response)
           })
           .catch(e => {
-            this.emailRules.push(e)
+            this.emailRules.push(e),
+            this.passwordRules.push(e)
           })
           
       }
