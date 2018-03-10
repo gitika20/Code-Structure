@@ -5,6 +5,9 @@ import Vuetify from 'vuetify'
 import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueGoodTable from 'vue-good-table';
+
+Vue.use(VueGoodTable);
 
 Vue.use(Vuetify);
  Vue.use(VueAwesomeSwiper);

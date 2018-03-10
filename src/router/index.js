@@ -4,10 +4,7 @@ import Router from 'vue-router'
 import login from './../components/login/login.vue'
 import navbar from './../components/navbar/navbar.vue'
 import profile from './../components/profile/profile.vue'
-import jumbotro from './../components/jumbotro/jumbotro.vue'
-0
-
-
+import transport from './../components/transport/transport.vue'
 
 Vue.use(Router)
 
@@ -29,9 +26,9 @@ export default new Router({
       component:profile
     },
     {
-      path: '/jumbotro',
-      name: 'jumbotro',
-      component: jumbotro
+      path: '/transport',
+      name: 'transport',
+      component: transport
 
     }
     
