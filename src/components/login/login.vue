@@ -18,7 +18,7 @@
 
             <v-card>
               <v-layout>
-                <v-flex lg5 xs6 style="background-color:#F7F7C9">
+                <v-flex  lg5 xs6 style="background-color:#F7F7C9">
                   <!-- left-side -->
                   <div >
 
@@ -43,7 +43,7 @@
                       <v-form v-model="validx" method="post" v-on:submit.prevent="getFormValues">
 
                         <div class="user_login text-xs-left">
-                          <v-text-field prepend-icon="person" name="login" label="User-Email" type="login" v-model="email" :rules="emailRules" class="useremail"></v-text-field>
+                          <v-text-field prepend-icon="person" name="login" label="User-Email" type="email" v-model="email" :rules="emailRules" class="useremail"></v-text-field>
                           <v-text-field prepend-icon="lock" name="password" label="Password" id="password" type="password" v-model="password" :rules="passwordRules"></v-text-field>
                         </div>
 

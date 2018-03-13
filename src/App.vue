@@ -4,6 +4,8 @@
     <router-link to="/navbar"></router-link>
     <router-link to="/profile"></router-link>
     <router-link to="/transport"></router-link>
+    <router-link to="/hostel"></router-link>
+    <router-link to="/feedback"></router-link>
 
     <router-view></router-view>
     

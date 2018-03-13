@@ -13,7 +13,7 @@
             <div class="outer_body">
               <v-container style="font-size:18px">
                 <v-layout row-wrap>
-                  <v-flex lg4 offset-lg2 xs-6>
+                  <v-flex lg4 offset-lg2 xs6>
                     <span>Name:</span>
                   </v-flex>
                   <v-flex lg6 xs6>
@@ -21,7 +21,7 @@
                   </v-flex>
                 </v-layout>
                 <v-layout row-wrap>
-                  <v-flex lg4 offset-lg2 xs-6>
+                  <v-flex lg4 offset-lg2 xs6>
 
                     <span>Registration No.:</span>
                   </v-flex>

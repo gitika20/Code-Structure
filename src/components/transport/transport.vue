@@ -10,7 +10,7 @@
             <div class="outer_part">
               <v-container>
                 <v-layout row-wrap>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Transport</span>
                   </v-flex>
                   <v-flex>
@@ -19,56 +19,56 @@
 
                 </v-layout>
                 <v-layout row-wrap>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Route Name:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     LB Nagar-KPHB
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Vehicle Type:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     car
                   </v-flex>
                 </v-layout>
                 <v-layout row-wrap>
-                  <v-flex lg3 xs3>
-                    <span>Vehicle :</span>
+                  <v-flex lg3 xs4>
+                    <span>Vehicle:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     AP09CP00701824
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Seating Capacity:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     60
                   </v-flex>
 
 
                 </v-layout>
                 <v-layout row-wrap>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Route Amount:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     500
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Alloted Seats:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs8>
                     024
                   </v-flex>
 
                 </v-layout>
                 <v-layout row-wrap>
 
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs4>
                     <span>Stop Name:</span>
                   </v-flex>
-                  <v-flex>
+                  <v-flex xs8>
                     Chadarghat 06:00PM
                   </v-flex>
 
@@ -77,7 +77,7 @@
               <v-container>
                 <v-layout row-wrap>
                 
-                <v-table class="table" >
+                <table class="table" >
                   <tr>
                   <th>Route Name</th>
                   <th>Type</th>
@@ -99,7 +99,7 @@
                       <td>2014-12-15 2:04:25PM</td>
                       <td>halls</td>
                     </tr>
-                </v-table>
+                </table>
 </v-layout>
 
               </v-container>

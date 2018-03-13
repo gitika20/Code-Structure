@@ -5,6 +5,9 @@ import login from './../components/login/login.vue'
 import navbar from './../components/navbar/navbar.vue'
 import profile from './../components/profile/profile.vue'
 import transport from './../components/transport/transport.vue'
+import hostel from './../components/hostel/hostel.vue'
+import feedback from './../components/feedback/feedback.vue'
+
 
 Vue.use(Router)
 
@@ -30,7 +33,21 @@ export default new Router({
       name: 'transport',
       component: transport
 
-    }
+    },
+    {
+      path: '/hostel',
+      name: 'hostel',
+      component: hostel
+
+    },
+     {
+       path: '/feedback',
+       name: 'feedback',
+       component: feedback
+
+     }
+
+
     
    
   ]
