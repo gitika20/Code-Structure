@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <router-link to="/"></router-link>
+    <router-link to="/">Home </router-link>
     <router-link to="/navbar"></router-link>
-    <router-link to="/profile"></router-link>
-    <router-link to="/transport"></router-link>
-    <router-link to="/hostel"></router-link>
-    <router-link to="/feedback"></router-link>
+    <router-link to="/profile">Profile</router-link>
+    <router-link to="/transport">Transport</router-link>
+    <router-link to="/hostel">Hostel</router-link>
+    <router-link to="/feedback">Feedback</router-link>
 
     <router-view></router-view>
     
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 

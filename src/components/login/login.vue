@@ -40,7 +40,7 @@
                   <!-- right side -->
                   <div >
                     <v-card-text class="scard">
-                      <v-form v-model="valid" method="post" v-on:submit.prevent="getFormValues">
+                      <v-form v-model="validx" method="post" v-on:submit.prevent="getFormValues">
 
                         <div class="user_login text-xs-left">
                           <v-text-field prepend-icon="person" name="login" label="User-Email" type="email" v-model="email" :rules="emailRules" class="useremail"></v-text-field>
@@ -74,7 +74,7 @@
       return {
         email: '',
         password: '',
-        valid: true,
+        validx: true,
 
         emailRules: [v => !!v || '*User-Email is required',
           (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'User-Email must be valid'
