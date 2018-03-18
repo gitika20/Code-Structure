@@ -13,7 +13,7 @@
                   <v-flex lg3 xs4>
                     <span>Transport</span>
                   </v-flex>
-                  <v-flex>
+                  <v-flex xs4>
                     <span>Yes</span>
                   </v-flex>
 
@@ -22,13 +22,13 @@
                   <v-flex lg3 xs4>
                     <span>Route Name:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
+                  <v-flex lg3 xs4>
                     LB Nagar-KPHB
                   </v-flex>
                   <v-flex lg3 xs4>
                     <span>Vehicle Type:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
+                  <v-flex lg3 xs4>
                     car
                   </v-flex>
                 </v-layout>
@@ -36,13 +36,13 @@
                   <v-flex lg3 xs4>
                     <span>Vehicle:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
-                    AP09CP00701824
+                  <v-flex lg3 xs4>
+                    AP09C
                   </v-flex>
                   <v-flex lg3 xs4>
                     <span>Seating Capacity:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
+                  <v-flex lg3 xs4>
                     60
                   </v-flex>
 
@@ -52,13 +52,13 @@
                   <v-flex lg3 xs4>
                     <span>Route Amount:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
+                  <v-flex lg3 xs4>
                     500
                   </v-flex>
                   <v-flex lg3 xs4>
                     <span>Alloted Seats:</span>
                   </v-flex>
-                  <v-flex lg3 xs8>
+                  <v-flex lg3 xs4>
                     024
                   </v-flex>
 
@@ -76,7 +76,7 @@
               </v-container>
               <v-container>
                 <v-layout row-wrap>
-                
+                <div style="overflow-x:scroll;">
                 <table class="table" >
                   <tr>
                   <th>Route Name</th>
@@ -92,14 +92,25 @@
                     <tr>
                       <td>LB Nagar-KPHB</td>
                       <td>Car</td>
-                      <td>AP09CP0123</td>
+                      <td>AP09</td>
                       <td>500</td>
                       <td>Chandraghat 06:00PM</td>
                       <td>Active</td>
                       <td>2014-12-15 2:04:25PM</td>
                       <td>halls</td>
                     </tr>
+                      <tr>
+                        <td>LB Nagar-KPHB</td>
+                        <td>Car</td>
+                        <td>AP09</td>
+                        <td>500</td>
+                        <td>Chandraghat 06:00PM</td>
+                        <td>Active</td>
+                        <td>2014-12-15 2:04:25PM</td>
+                        <td>halls</td>
+                      </tr>
                 </table>
+                </div>
 </v-layout>
 
               </v-container>
@@ -152,6 +163,7 @@
  background: #0E0EEB;
 
     }
+    tr:nth-child(even){background-color: #f2f2f2}
 
     h4 {
       color: white;
