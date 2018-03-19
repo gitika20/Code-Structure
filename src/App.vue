@@ -6,6 +6,7 @@
     <router-link to="/transport">Transport</router-link>
     <router-link to="/hostel">Hostel</router-link>
     <router-link to="/feedback">Feedback</router-link>
+    <router-link to="/attendance">attendance</router-link>
 
     <router-view></router-view>
     

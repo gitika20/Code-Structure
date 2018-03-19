@@ -17,10 +17,9 @@
           <v-flex lg6 offset-lg3 xs12>
 
             <v-card>
-              <v-layout>
-                <v-flex  lg5 xs6 style="background-color:#F7F7C9">
+              <v-layout row wrap>
+                <v-flex  lg5 xs12 style="background-color:#F7F7C9">
                   <!-- left-side -->
-                  <div >
 
                     <div class="student_name text-xs-center">
                       <i class="material-icons" style="font-size:38px;padding:2px">account_circle</i>
@@ -32,11 +31,8 @@
                     <div class="reset_password text-xs-center">
                       <a href="#"> Reset your Account Password</a>
                     </div>
-                  </div>
-
                 </v-flex>
-
-                <v-flex lg7 xs6 style="background-color:#CEFAFA">
+                <v-flex lg7 xs12 style="background-color:#CEFAFA">
                   <!-- right side -->
                   <div >
                     <v-card-text class="scard">
@@ -48,7 +44,7 @@
                         </div>
 
                         <div class="login_button">
-                          <v-btn class="button" type="submit" @click="submit" :disabled="!valid">Log in</v-btn>
+                          <v-btn block class="button" type="submit" @click="submit" :disabled="!valid">Log in</v-btn>
                         </div>
 
                       </v-form>
@@ -151,7 +147,7 @@
 
   .login_button {
     margin-top: 30px;
-    margin-left:-13px;
+  
   }
 
   .button {
