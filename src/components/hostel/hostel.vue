@@ -2,80 +2,80 @@
   <div id="app">
     <v-app id="inspire">
       <v-container fluid grid-list-lg>
-        <v-layout row-wrap class="text-xs-left">
-          <v-flex lg8 offset-lg3 xs12>
+        <v-layout row wrap class="text-xs-left">
+          <v-flex lg8 offset-lg3 xs12 sm12>
             <v-toolbar class="blue darken" style="border-radius:7px 7px 0px 0px;height:52px">
               <h4>Hostel Details</h4>
             </v-toolbar>
             <div class="outer_part">
               <v-container>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
-                    <span>Hostel</span>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
+                    <span>Hostel:</span>
                   </v-flex>
                   <v-flex>
                     <span>Yes</span>
                   </v-flex>
 
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Hostel Name:</span>
                   </v-flex>
-                  <v-flex lg3 xs5>
+                  <v-flex lg3 xs6 sm3>
                     Malligai
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Block:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs6 sm3>
                     F BLOCK
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Room No.:</span>
                   </v-flex>
-                  <v-flex lg3 xs5>
+                  <v-flex lg3 xs6 sm3>
                     407
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Room Type:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs6 sm3>
                     Two (Attached Non AC)
                   </v-flex>
 
 
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Fee Amount:</span>
                   </v-flex>
-                  <v-flex lg3 xs5>
+                  <v-flex lg3 xs6 sm3>
                     150000.0
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Pay Type:</span>
                   </v-flex>
-                  <v-flex lg3 xs3>
+                  <v-flex lg3 xs6 sm3>
                     Online
                   </v-flex>
 
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
 
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Laundary:</span>
                   </v-flex>
-                  <v-flex xs4>
+                  <v-flex xs6>
                     Yes
                   </v-flex>
 
                 </v-layout>
               </v-container>
               <v-container>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <div style="overflow-x:scroll;">
                     <table class="table">
                       <tr>

@@ -2,14 +2,14 @@
   <div id="app">
     <v-app id="inspire">
       <v-container fluid grid-list-lg>
-        <v-layout row-wrap class="text-xs-left">
+        <v-layout row wrap class="text-xs-left">
           <v-flex lg8 offset-lg3 xs12>
             <v-toolbar class="blue darken" style="border-radius:7px 7px 0px 0px;height:52px">
               <h4>Attendance</h4>
             </v-toolbar>
             <div class="outer_part">
                 <v-container>
-                    <v-layout row-wrap>
+                    <v-layout row wrap>
                       
                                 <div style="overflow-x:scroll;">
                                    

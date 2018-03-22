@@ -2,80 +2,80 @@
   <div id="app">
     <v-app id="inspire">
       <v-container fluid grid-list-lg>
-        <v-layout row-wrap class="text-xs-left">
-          <v-flex lg8 offset-lg3 xs12>
+        <v-layout row wrap class="text-xs-left">
+          <v-flex lg8 offset-lg3 xs12 sm12>
             <v-toolbar class="blue darken" style="border-radius:7px 7px 0px 0px;height:52px">
               <h4>Transport Details</h4>
             </v-toolbar>
             <div class="outer_part">
               <v-container>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Transport</span>
                   </v-flex>
-                  <v-flex xs4>
+                  <v-flex xs6>
                     <span>Yes</span>
                   </v-flex>
 
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Route Name:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     LB Nagar-KPHB
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Vehicle Type:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     car
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Vehicle:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     AP09C
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Seating Capacity:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     60
                   </v-flex>
 
 
                 </v-layout>
-                <v-layout row-wrap>
-                  <v-flex lg3 xs4>
+                <v-layout row wrap>
+                  <v-flex lg3 xs5 sm3>
                     <span>Route Amount:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     500
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Alloted Seats:</span>
                   </v-flex>
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs6 sm3>
                     024
                   </v-flex>
 
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
 
-                  <v-flex lg3 xs4>
+                  <v-flex lg3 xs5 sm3>
                     <span>Stop Name:</span>
                   </v-flex>
-                  <v-flex xs8>
+                  <v-flex xs7>
                     Chadarghat 06:00PM
                   </v-flex>
 
                 </v-layout>
               </v-container>
               <v-container>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                 <div style="overflow-x:scroll;">
                 <table class="table" >
                   <tr>

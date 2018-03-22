@@ -11,28 +11,30 @@
           <v-btn flat>Documentation</v-btn>
         </v-toolbar-items>
       </v-toolbar>
-
-      <v-container fluid fill-height style="margin-top:100px;">
+      <v-container fluid fill-height class="outer_container">
         <v-layout row wrap class="text-lg-center">
-          <v-flex lg6 offset-lg3 xs12>
+          <v-flex lg6 offset-lg3 xs12 sm12>
 
             <v-card>
-              <v-layout row wrap>
-                <v-flex  lg5 xs12 style="background-color:#F7F7C9">
+<v-layout row wrap>
+
+
+
+                <v-flex  lg5 xs12 sm5 style="background-color:#F7F7C9" >
                   <!-- left-side -->
 
-                    <div class="student_name text-xs-center">
-                      <i class="material-icons" style="font-size:38px;padding:2px">account_circle</i>
-                      <span>STUDENT</span>
+                    <div class="student_name text-xs-left">
+                      <i  class="material-icons">account_circle</i>
+                      <span id="txt1">STUDENT</span>
                     </div>
-                    <div class="login_area text-xs-center">
-                      <span>LOG IN</span>
+                    <div class="login_area text-xs-left">
+                      <span>Log in</span>
                     </div>
-                    <div class="reset_password text-xs-center">
+                    <div class="reset_password text-xs-left">
                       <a href="#"> Reset your Account Password</a>
                     </div>
                 </v-flex>
-                <v-flex lg7 xs12 style="background-color:#CEFAFA">
+                <v-flex lg7 xs12 sm7 style="background-color:#CEFAFA">
                   <!-- right side -->
                   <div >
                     <v-card-text class="scard">
@@ -111,16 +113,25 @@
 
 </script>
 <style scoped>
+  .outer_container{
+    margin-top:80px;
+  }
   .student_name {
     font-family: Roboto;
-    font-size: 33px;
+    font-size: 28px;
     font-weight: 100;
-    padding: 15px;
-    border-bottom: 1px solid #999797;
+   padding: 25px;
   }
 
+.material-icons{
+ vertical-align: text-bottom;
+
+ font-size: 36px !important;
+  
+}
+
   .login_area {
-    padding: 10px;
+    padding: 10px 25px 15px 25px;
     font-family: Roboto;
     font-size: 33px;
     font-weight: 100;
@@ -131,7 +142,7 @@
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 1px;
-    padding: 95px 10px 25px 10px;
+    padding: 75px 25px 25px ;
   }
 
   a {
@@ -160,5 +171,17 @@
     background: #D1F5F1;
     color: #3A3636;
   }
+  
+   @media screen and (max-width: 480px){
+     .outer_container{
+       margin-top:40px;
+     }
+     .login_area{
+        padding: 5px 25px 15px 25px;
+     }
+     .reset_password{
+       padding: 10px 25px 25px ;
+     }
+   }
 
 </style>

@@ -12,7 +12,7 @@
             </v-toolbar>
             <div class="outer_body">
               <v-container style="font-size:18px">
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span>Name:</span>
                   </v-flex>
@@ -20,7 +20,7 @@
                     JOHN DOE
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
 
                     <span>Registration No.:</span>
@@ -31,7 +31,7 @@
                   </v-flex>
                 </v-layout>
 
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span>Course:</span>
                   </v-flex>
@@ -39,7 +39,7 @@
                     B.Tech
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span> Branch:</span>
                   </v-flex>
@@ -47,7 +47,7 @@
                     Computer Science And Engineering
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span> Semester:</span>
                   </v-flex>
@@ -55,7 +55,7 @@
                     IV
                   </v-flex>
                 </v-layout>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg4 offset-lg2 xs6>
                     <span>Email:</span>
                   </v-flex>
@@ -68,7 +68,7 @@
               <hr class="style14">
               <v-container style="font-size:16px">
 
-                <v-layout row-wrap>
+                <v-layout row wrap>
 
                   <v-flex lg3 xs3>
                     <span>Date Of Birth:</span>
@@ -100,7 +100,7 @@
                   </v-flex>
                 </v-layout>
                 <hr>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg3 xs3>
                     <span>Address:</span>
                   </v-flex>
@@ -109,7 +109,7 @@
                   </v-flex>
                 </v-layout>
 
-                <!-- <v-layout row-wrap>
+                <!-- <v-layout row wrap>
                   <v-flex lg3>
                    <span>City:</span>
                   </v-flex>
@@ -124,7 +124,7 @@
                   </v-flex>
                 </v-layout> -->
                 <hr>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg3 xs3>
                     <span> Pincode:</span>
                   </v-flex>
@@ -139,7 +139,7 @@
                   </v-flex>
                 </v-layout>
                 <hr>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg3 xs3>
                     <span>Father Name:</span>
                   </v-flex>
@@ -149,7 +149,7 @@
 
                 </v-layout>
                 <hr>
-                <v-layout row-wrap>
+                <v-layout row wrap>
                   <v-flex lg3 xs3>
                     <span>Mother Name:</span>
                   </v-flex>
