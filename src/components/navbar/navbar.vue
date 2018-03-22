@@ -1,260 +1,230 @@
 <template>
-<div id="app">
-    <v-app class="hgt">
-        
-        
+  <div id="app">
+    <v-app id="inspire">
+      <v-navigation-drawer fixed :clipped="$vuetify.breakpoint.mdAndUp" app v-model="drawer" class="scroll grey lighten-3">
+        <div class="sticky">
+          <v-container fluid align-baselined style="padding: 5% 0;" class="blue-grey lighten-1">
+            <v-layout row wrap text-xs-left>
+              <v-flex lg12 xs12>
+                <h3 class="pt-1 pb-1 nav-text">
+                  harry porter
+                </h3>
+              </v-flex>
 
-        <v-navigation-drawer permanent>
-            <v-flex>
-                <v-card>
-                    <v-card-title primary-title>
-                        <div>
-                            <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-                            <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales</div>
-                        </div>
-                    </v-card-title>
+            </v-layout>
+            <v-layout row wrap text-xs-left>
+              <v-flex lg12 xs12>
+                <h3 class="pt-1 pb-1 nav-text">
+                  {{ reg }}
+                </h3>
+              </v-flex>
 
-                </v-card>
+            </v-layout>
+          </v-container>
+          <!-- <hr> -->
+          <v-container style="padding: 3% 0;">
+            <v-layout row>
 
-            </v-flex>
-            <div class="sticky">
-                <v-card-actions>
-                    <v-btn flat color="orange">Share</v-btn>
-                    <v-btn flat color="orange">Explore</v-btn>
-                </v-card-actions>
-            </div>
-            <v-divider></v-divider>
-            <v-list class="pt-0">
+              <v-flex lg4 xs4 v-for="(icon,i) in icons" :key="i">
+                <v-btn small block fab flat depressed class="center" color="white">
+                  <v-icon medium>{{ icon }}</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
 
-                <v-expansion-panel focusable>
+          </v-container>
+        </div>
+        <v-divider></v-divider>
 
-                    <v-expansion-panel-content v-for="(item,i) in items" :key="i" class="grey lighten-3">
-                        <div slot="header">
-                            <v-icon class="mr-4">{{item.icon}}</v-icon>{{item.title}}</div>
-                        <v-expansion-panel>
-                            <v-expansion-panel-content v-for="(sitem,j) in item.smenu1" :key="j" class="grey lighten-2">
-                                <div slot="header">
-                                    <v-icon class="mr-4">{{sitem.icon}}</v-icon>{{sitem.title}}</div>
-                                <v-expansion-panel>
-                                    <v-expansion-panel-content v-for="(ssitem,k) in sitem.smenu2" :key="k" expand-icon="" class="grey lighten-1">
-                                        <div slot="header">
-                                            <v-icon class="mr-4">{{ssitem.icon}}</v-icon>{{ssitem.title}}</div>
-                                    </v-expansion-panel-content>
+        <v-list dense>
+          <v-expansion-panel focusable expand>
 
-                                </v-expansion-panel>
-                            </v-expansion-panel-content>
-                        </v-expansion-panel>
-                    </v-expansion-panel-content>
+            <v-expansion-panel-content v-for="(item,i) in items" :key="i" class="grey lighten-3">
+              <div slot="header">
+                <v-icon class="mr-4" small>{{item.icon}}</v-icon>{{item.title}}</div>
+
+              <div class="grey lighten-2">
+                <v-expansion-panel class="shift">
+                  <v-expansion-panel-content v-for="(sitem,j) in item.smenu1" :key="j" class="grey lighten-2" hide-actions>
+                    <div slot="header">
+                      <v-icon class="mr-4" small>{{sitem.icon}}</v-icon>{{sitem.title}}</div>
+
+                  </v-expansion-panel-content>
                 </v-expansion-panel>
-            </v-list>
-        </v-navigation-drawer>
+              </div>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+
+        </v-list>
+        </v-list>
+      </v-navigation-drawer>
+      <v-toolbar color="blue-grey darken-2" dark app :clipped-left="$vuetify.breakpoint.mdAndUp" fixed>
+        <v-toolbar-title style="width: 100px" class="ml-0 pl-0">
+          <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+          <span class="hidden-sm-and-down">{{ logo }}</span>
+        </v-toolbar-title>
+      </v-toolbar>
+
+
+
     </v-app>
-</div>
+  </div>
+
 </template>
+
 <script>
-      export default {
-    data() {
-            return {
-                items: [
-                    {
-                        title: "Parent 1",
-                        icon: "dashboard",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 2",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 3",
-                        icon: "dashboard",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 5",
-                        icon: "dashboard",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                    {
-                        title: "Parent 4",
-                        icon: "question_answer",
-                        smenu1: [
-                            {
-                                title: "Child 1",
-                                icon: "question_answer",
-                                smenu2: [
-                                    { title: "Grandchild 1", icon: "question_answer" },
-                                    { title: "Grandchild 2", icon: "question_answer" }
-                                ]
-                            },
-                            { title: "Child 2", icon: "question_answer" }
-                        ]
-                    },
-                ],
-                right: null
-            };
+  export default {
+    data: () => ({
+      name: "Harry Porter",
+      logo: "logo",
+
+      drawer: null,
+      icons: [
+        "date_range",
+        "event",
+        "power_settings_new"
+      ],
+      reg: "RA16111000031",
+      items: [{
+          title: "PROFILE",
+          icon: "dashboard",
+          smenu1: [{
+              title: "GENERAL",
+              icon: "question_answer"
+            },
+            {
+              title: "HOSTELS",
+              icon: "question_answer"
+            },
+            {
+              title: "TRANSPORT",
+              icon: "question_answer"
+            },
+            {
+              title: "PROFILE UPDATE",
+              icon: "question_answer"
+            }
+          ]
+        },
+        {
+          title: "ACADEMIC",
+          icon: "question_answer",
+          smenu1: [{
+              title: "ATTENDANCE",
+              icon: "question_answer"
+            },
+            {
+              title: "CREDIT/MARKS",
+              icon: "question_answer"
+            },
+            {
+              title: "ARREAR",
+              icon: "question_answer"
+            },
+            {
+              title: "PERFORMANCE",
+              icon: "question_answer"
+            },
+            {
+              title: "SYLLABUS",
+              icon: "question_answer"
+            }
+          ]
+        },
+        {
+          title: "FINANCIAL DETAILS",
+          icon: "question_answer",
+          smenu1: [{
+              title: "FEE STRUCTURE",
+              icon: "question_answer"
+            },
+            {
+              title: "FEE PAID",
+              icon: "question_answer"
+            },
+            {
+              title: "FEE DUE",
+              icon: "question_answer"
+            }
+          ]
+        },
+        {
+          title: "DEFAULTERS",
+          icon: "question_answer",
+          smenu1: [{
+              title: "MALPRACTICE",
+              icon: "question_answer"
+            },
+            {
+              title: "DETENTION",
+              icon: "question_answer"
+            },
+            {
+              title: "MISBEHAVIOUR",
+              icon: "question_answer"
+            }
+          ]
+        },
+        {
+          title: "FEEDBACK",
+          icon: "dashboard"
         }
-      }
+      ],
+      right: null
+    }),
+    props: {
+      source: String
+    }
+  }
 
 </script>
-<style scoped>
-.hgt{
-  height: 20vh;
-}
 
-.hgt::-webkit-scrollbar{
-  width: 2px;
-}
-.sticky{
-  background: yellow;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  #app {
+    margin-left: 0;
+
+    position: absolute;
+    /* width: 20%; */
+  }
+
+  .nav-text {
+    letter-spacing: 0.2em;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  /* .name-reg{
+     background: #546E7A
+  }  */
+
+  .shift {
+    padding-left: 10px;
+    margin-left: 0;
+  }
+
+  .scroll::-webkit-scrollbar {
+    /* width: 2px!important; */
+    display: none !important;
+
+  }
+
+  .center {
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .sticky {
+    background: #455A64;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    /* border-bottom: 1px solid black; */
+    padding: 0px;
+    margin: 0;
+
+  }
+
 </style>
